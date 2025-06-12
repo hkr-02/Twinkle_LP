@@ -1,0 +1,616 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Shippori Mincho", serif;
+  background-color: #e8ece9;
+  background-image: url(../img/back.png);
+  background-repeat: repeat;
+  color: #1f1c1c;
+}
+
+/* 共通 */
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(233 217 231 / 68%);
+}
+
+.header-inner {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.header-logo {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.header-logo img {
+  width: 55%;
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.header-nav-item {
+  transition: opacity 0.5s;
+}
+
+.header-nav-item:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.header-nav-link {
+  font-size: 14px;
+  color: #c71585;
+}
+
+/* ファーストビュー */
+.fv-picture {
+  position: relative;
+}
+
+.fv img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  height: 80vh;
+}
+
+.fv-inner {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 2;
+}
+
+.fv-text {
+  font-size: 14px;
+}
+
+/* main */
+.watch-img {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.watch-img img {
+  width: 100%;
+}
+
+.content-wrapper {
+  width: 85%;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 20px;
+  position: relative;
+  margin: 35px 0;
+}
+
+h1.heading::before,
+h1.heading::after {
+  position: absolute;
+  width: 1.1em;
+  border-top: 5px double #000;
+  top: 12px;
+  content: "";
+}
+
+h1.heading::before {
+  left: 3px;
+}
+
+h1.heading::after {
+  right: 3px;
+}
+
+.text {
+  line-height: 1.6;
+}
+
+.brand {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.brand-wrapper {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.brand-logo {
+  margin-top: 20px;
+}
+
+.img-wrapper {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #fff; /* #404040 */
+  background: linear-gradient(to bottom right, #ffc1ff, #a8a8ff);
+}
+
+.footer i {
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff; /* #404040 */
+}
+
+.footer-nav-list {
+  font-weight: bold;
+}
+
+.footer-nav-item {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.footer-nav-item > h1 {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+address,
+.shop-address {
+  display: inline-block;
+}
+
+.footer-nav-item + .footer-nav-item {
+  border-top: 1px dashed #fff; /* #404040 */
+}
+
+.sns-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+h1.contact-heading {
+  padding-bottom: 5px;
+}
+
+.footer-copy-wrapper {
+  width: 100%;
+}
+
+.footer-copy-wrapper small {
+  display: inline-block;
+  width: 70%;
+  margin: 8px auto;
+}
+
+/* 画面幅768px以上 トップページ */
+@media screen and (min-width: 768px) {
+  /* ヘッダー */
+  .header {
+    width: 100%;
+    height: 80px;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    padding-top: 8px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .header-nav-list {
+    padding: 0 30px;
+    gap: 42px;
+    margin: 0;
+  }
+
+  .header-nav-link {
+    font-size: 20px;
+  }
+
+  /* ファーストビュー */
+  .fv img {
+    height: 64vh;
+    width: 100%;
+  }
+
+  .fv-inner {
+    top: 48%;
+    left: 40%;
+    transform: translate(-50%, -35%);
+  }
+
+  .fv-text {
+    font-size: 1.3em;
+  }
+
+  /* mainセクション */
+  .wrap-watch {
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .wrap-watch-2 {
+    flex-direction: row-reverse;
+  }
+
+  h1.heading {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+  }
+
+  .wrap-watch-2 h1.heading {
+    margin-bottom: 75px;
+  }
+
+  h1.heading::before,
+  h1.heading::after {
+    top: 17px;
+  }
+
+  .text {
+    line-height: 1.8;
+    font-size: 1.1em;
+  }
+
+  .brand-wrapper {
+    width: 90%;
+    margin: 10% auto;
+  }
+
+  .brand-text br {
+    display: none;
+  }
+
+  .brand-logo {
+    margin: 50px 0;
+  }
+
+  /* フッター */
+  .footer-nav-list {
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+  }
+
+  .footer-nav-item {
+    width: calc(100% / 3);
+  }
+
+  .address-wrapper {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+
+  .footer-nav-item + .footer-nav-item {
+    border: none;
+  }
+
+  .footer-nav-item > h1 {
+    padding-bottom: 7px;
+    font-size: 1.6em;
+  }
+
+  .sns-nav-list {
+    gap: 25px;
+  }
+
+  .footer-nav-list a,
+  .footer-nav-list i {
+    font-size: 1.2em;
+  }
+
+  .footer-copy-wrapper small {
+    font-size: 1em;
+  }
+}
+
+/* 画面幅960px以上 トップページ */
+@media screen and (min-width: 960px) {
+  /* mainセクション */
+  .wrap-watch {
+    width: 85%;
+    margin: 20px auto;
+    gap: 15%;
+  }
+
+  h1.heading::before,
+  h1.heading::after {
+    width: 2.2em;
+  }
+
+  h1.heading::before {
+    transform: translate(-90%, 0);
+  }
+
+  h1.heading::after {
+    transform: translate(90%, 0);
+  }
+
+  .text {
+    line-height: 2.3;
+  }
+}
+
+/* 会社情報 スマホ表示 */
+.company {
+  width: 100%;
+  text-align: center;
+}
+
+.company h1 {
+  margin: 20px 0;
+}
+
+#table01 {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+#table01 th,
+#table01 td {
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+
+#table01 th {
+  font-weight: 900;
+  font-size: 1em;
+  width: 100%;
+  border-bottom: 1px solid #bdb9b9;
+}
+
+#table01 td {
+  font-weight: 200;
+  font-size: 0.9em;
+}
+
+.access {
+  width: 100%;
+}
+
+.map-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0 3em;
+}
+
+iframe {
+  width: 100%;
+  height: 30vh;
+}
+
+/* 会社情報 768px以上の画面幅 */
+@media screen and (min-width: 768px) {
+  .company h1 {
+    font-size: 36px;
+    margin: 40px 0;
+  }
+
+  #table01 tr {
+    display: flex;
+    height: 5%;
+    justify-content: space-between;
+  }
+
+  #table01 th,
+  #table01 td {
+    border: none;
+    vertical-align: middle;
+    padding: 30px;
+    font-size: 18px;
+  }
+
+  #table01 th {
+    text-align: right;
+    flex: 1;
+  }
+
+  #table01 td {
+    flex: 2;
+  }
+
+  .map-wrapper {
+    height: 40vh;
+    padding-bottom: 7em;
+  }
+
+  iframe {
+    height: 100%;
+  }
+}
+
+/* お問合せページ スマホ表示 */
+.contact-heading {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.content {
+  background-color: #fff;
+  width: 90%;
+  margin: 10px auto 15px;
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+}
+.content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  margin-bottom: 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 15px;
+}
+
+.required {
+  color: #f33;
+  font-size: 0.7em;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 5px;
+  background-color: #fee;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  font-size: 0.9em;
+  width: 100%;
+  padding: 8px;
+}
+
+textarea {
+  width: 100%;
+  height: 16vh;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #2096f3;
+}
+
+.btn-wrap {
+  margin: 10px 0;
+}
+
+button {
+  width: 40%;
+  display: block;
+  background-color: #2096f3;
+  color: #fff;
+  padding: 10px;
+  margin: 0 auto 10px;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.7s;
+}
+
+button:hover {
+  background-color: #69b0ee;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.any {
+  font-size: 0.9em;
+  padding: 3px;
+}
+
+/* お問合せページ 768px以上の画面幅 */
+@media screen and (min-width: 768px) {
+  .contact-form {
+    height: 90vh;
+  }
+
+  .contact-heading {
+    font-size: 32px;
+    margin: 10px auto;
+    padding: 0;
+  }
+
+  .content {
+    max-width: 650px;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #d1d1d1;
+    padding: 15px 35px;
+  }
+
+  .input-wrap {
+    margin-bottom: 1.2em;
+  }
+
+  label {
+    font-size: 1em;
+    margin-bottom: 0.1em;
+  }
+
+  .required {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+  }
+
+  input {
+    font-size: 1em;
+  }
+
+  textarea {
+    font-size: 1em;
+    height: 60px;
+  }
+
+  .btn-wrap {
+    margin: 10px 0 40px;
+  }
+
+  button {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .contact-form {
+    height: calc(100vh - 10vh - 90px);
+  }
+}
